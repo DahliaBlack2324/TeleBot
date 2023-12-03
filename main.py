@@ -1,7 +1,6 @@
 import os
 import random
-from aiogram import Bot, types
-from aiogram.dispatcher import Dispatcher
+from aiogram import Bot, types, Dispatcher
 from aiogram.utils import executor
 
 bot = Bot(token="#####")
