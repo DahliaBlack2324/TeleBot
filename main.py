@@ -18,7 +18,7 @@ async def process_start_command(message: types.Message):
         [types.KeyboardButton(text="Рандомный стикер")],
     ]
     keyboard = types.ReplyKeyboardMarkup(keyboard=kb)
-    await message.reply("Привет, я бот в тг", reply_markup=keyboard)
+    await message.reply("Привет, я новый бот в Telegram!!", reply_markup=keyboard)
 
 @dp.message_handler(lambda message: message.text == "Рандомный стикер")
 async def process_random_sticker(message: types.Message):
@@ -28,7 +28,7 @@ async def process_random_sticker(message: types.Message):
         with open(sticker_path, "rb") as sticker:
             await bot.send_sticker(message.from_user.id, sticker)
     else:
-        await bot.send_message(message.from_user.id, "В папке нет фотографий стикеров.")
+        await bot.send_message(message.from_user.id, "В папке нет картинок стикеров.")
 
 @dp.message_handler(lambda message: message.text == "Рандомное число")
 async def process_random_number(message: types.Message):
